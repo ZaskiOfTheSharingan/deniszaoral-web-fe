@@ -6,13 +6,6 @@
   </div>
 </template>
 
-<script>
-import EmailForm from '@/ui/EmailForm.vue'
-export default {
-  components: {
-    EmailForm,
-  },
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped></style>
