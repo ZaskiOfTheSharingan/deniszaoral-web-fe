@@ -35,9 +35,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/recaptcha',
   ],
-  generate: {
-    routes: ['/blog'],
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
