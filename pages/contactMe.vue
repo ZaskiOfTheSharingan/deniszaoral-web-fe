@@ -1,6 +1,6 @@
 <template>
   <div class="justify-center items-center">
-    <div class="h-96">
+    <div class="h-screen">
       <EmailForm />
     </div>
   </div>

@@ -8,6 +8,13 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   theme: {
+    screens: {
+      tablet: '820px',
+
+      laptop: '1024px',
+
+      desktop: '1280px',
+    },
     extend: {},
   },
   plugins: [],

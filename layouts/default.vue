@@ -10,20 +10,20 @@
               >Denis Zaoral</NuxtLink
             >
           </div>
-          <!--<div class="self-center">
+          <div class="self-center dark:text-gray-200" v-if="isDesktop">
             <NuxtLink to="/">Domov</NuxtLink>
             <NuxtLink to="/blog">Blog</NuxtLink>
             <NuxtLink to="/contactMe">Kontakt</NuxtLink>
             <NuxtLink to="/aboutMe">O mně</NuxtLink>
-            {{ burgerMenuIsOpen }}
-          </div>-->
-          <div class="self-center h-8">
-            <!--
-            <button class="btn" @click="toggleDarkMode">
-            {{ darkMode ? 'Tmavý' : 'Světlý' }}
-          </button>
-        --><button type="button" @click="burgerMenuIsOpen = !burgerMenuIsOpen">
+          </div>
+          <div class="self-center h-8" v-if="!isDesktop">
+            <button type="button" @click="burgerMenuIsOpen = !burgerMenuIsOpen">
               <BurgerIcon />
+            </button>
+          </div>
+          <div v-if="isDesktop" class="self-center dark:text-gray-200">
+            <button class="btn" @click="toggleDarkMode">
+              {{ darkMode ? 'Tmavý' : 'Světlý' }}
             </button>
           </div>
         </div>
@@ -70,11 +70,23 @@ export default {
     return {
       darkMode: false,
       burgerMenuIsOpen: false,
+      windowWidth: 0,
     }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+      console.log(this.isDesktop)
+    })
   },
   methods: {
     toggleDarkMode() {
       this.darkMode = !this.darkMode
+    },
+  },
+  computed: {
+    isDesktop() {
+      return this.windowWidth >= 1024
     },
   },
 }

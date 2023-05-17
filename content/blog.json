@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "Nuxt - Výkonný framework pro Vue.js",
+      "date": "2022-05-30T12:40:08Z",
+      "image": "https://sebastianlandwehr.com/blog/how-to-access-nuxt-js-page-data-in-route-meta-fields/banner.png",
+      "content": [
+        "Nuxt je výkonný open-source framework postavený na Vue.js. Jeho hlavním cílem je poskytnout jednoduchý a elegantní způsob tvorby univerzálních a server-side renderovaných aplikací.",
+        "Díky konfigurovatelnému build systému umožňuje Nuxt snadno optimalizovat a distribuovat výsledný kód, což vede ke zlepšenému výkonu a rychlosti načítání aplikace.",
+        "Nuxt nabízí širokou škálu funkcí a doplňků, které usnadňují vývoj. Routing je jednoduchý a intuitivní díky vestavěnému modulu, správa stavu aplikace je usnadněna díky Vuex a generování statických stránek je podporováno nativně.",
+        "Díky své popularitě a aktivní komunitě je Nuxt dobře dokumentovaný a nabízí spoustu příkladů a návodů, které usnadňují práci vývojářům.",
+        "Svou flexibilitou a výkonem se Nuxt stal oblíbeným frameworkem pro tvorbu moderních webových aplikací, ať už jde o jednoduché stránky nebo rozsáhlejší enterprise projekty."
+      ]
+    },
+    {
+      "id": "2",
+      "title": "HTML - Základy webového vývoje",
+      "date": "2022-02-21T05:17:14Z",
+      "image": "https://www.freecodecamp.org/news/content/images/2021/08/html.png",
+      "content": [
+        "HTML (HyperText Markup Language) je základní stavební kámen webových stránek. Je to značkovací jazyk, který definuje strukturu a obsah webových dokumentů.",
+        "Webové stránky vytvořené pomocí HTML se skládají z hierarchie elementů, které jsou obklopeny značkami. Každý element má svou vlastní funkci a význam.",
+        "Pomocí HTML můžete vytvářet různé typy obsahu, jako jsou nadpisy, odstavce, odkazy, obrázky, formuláře a mnoho dalšího. Také umožňuje strukturovat obsah pomocí sekcí, tabulek, seznamů a dalších elementů.",
+        "HTML je základním jazykem pro webový vývoj a je důležité jej správně používat a dodržovat webové standardy, aby byly stránky přístupné, dobře strukturované a snadno udržovatelné.",
+        "Pro práci s HTML je zapotřebí textový editor a prohlížeč, který zobrazí výslednou stránku. Kromě samotného HTML můžete také využívat CSS pro stylování a JavaScript pro interaktivitu stránek."
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Jamstack - Moderní přístup k webovému vývoji",
+      "date": "2022-10-06T03:37:18Z",
+      "image": "https://www.jamstack.org/img/og/default-og-image.png",
+      "content": [
+        "Jamstack je moderní přístup k webovému vývoji, který kombinuje statické soubory, JavaScript a aplikační rozhraní (API) pro vytváření rychlých, bezpečných a škálovatelných webových stránek a aplikací.",
+        "Základem Jamstacku je generování statických stránek, které se vytvářejí při sestavení a předem obsahují veškerý potřebný obsah a logiku. To umožňuje snadné cachování a rychlé načítání stránek.",
+        "Jamstack využívá JavaScript pro interaktivitu a dynamický obsah. Díky tomu můžete přidat interaktivní prvky, jako jsou formuláře, vyhledávání nebo načítání dat ze vzdálených API.",
+        "Aplikační rozhraní (API) slouží jako most mezi statickými soubory a dynamickými daty. Můžete využít různá API, například pro správu obsahu (CMS) nebo pro získávání dat z externích služeb.",
+        "Jamstack je populární volbou pro tvorbu moderních webových stránek a aplikací, protože nabízí výhody jako vysokou výkonost, škálovatelnost, bezpečnost a jednoduchou správu. Pomáhá také oddělit frontend a backend, což usnadňuje spolupráci mezi vývojáři."
+      ]
+    },
+    {
+      "id": "4",
+      "title": "reCAPTCHA - Ochrana proti robotům na webových stránkách",
+      "date": "2022-04-25T17:25:27Z",
+      "image": "https://blog.andreas-stricker.at/wp-content/uploads/2022/01/google-recaptcha-v3.jpg",
+      "content": [
+        "reCAPTCHA je bezpečnostní služba vyvinutá společností Google, která pomáhá chránit webové stránky před nežádoucím automatizovaným provozem a zneužitím.",
+        "reCAPTCHA využívá pokročilé algoritmy a techniky rozpoznávání, které odlišují skutečné uživatele od robotů. Nejznámější je metoda ověření pomocí rozpoznávání obrázků, kdy uživatel musí vybrat správné obrázky z různých sad.",
+        "Další variantou je reCAPTCHA využívající analýzu chování uživatele, která sleduje interakce na stránce a posuzuje, zda se jedná o člověka či robota.",
+        "Integrace reCAPTCHA do webové stránky je snadná a zahrnuje vložení speciálního kódu do formulářů nebo odkazů, které chcete chránit.",
+        "reCAPTCHA je důležitým nástrojem pro ochranu webových stránek proti spamu, zneužití a neoprávněnému přístupu. Pomáhá zajistit, že akce prováděné na stránkách jsou prováděny skutečnými uživateli a ne automatizovanými roboty."
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Netlify - Moderní platforma pro web hosting a nasazení",
+      "date": "2022-06-04T15:48:26Z",
+      "image": "https://www.netlify.com/v3/static/og-image.png",
+      "content": [
+        "Netlify je moderní cloudová platforma, která nabízí jednoduché a efektivní řešení pro web hosting a nasazení webových stránek a aplikací.",
+        "S Netlify můžete snadno publikovat statické stránky a aplikace. Podporuje různé generátory statických stránek, jako je například Gatsby, Hugo nebo Jekyll. Stačí nahrát váš kód do repozitáře a Netlify provede automatické nasazení při každé změně.",
+        "Netlify nabízí mnoho dalších funkcí, které usnadňují vývoj a správu. Patří sem například automatické optimalizace a komprese zdrojových souborů, kontinuální integrace a nasazení (CI/CD), možnost nasazení A/B testů, správa vlastních domén, SSL certifikáty a mnoho dalšího.",
+        "Platforma je navržena s důrazem na výkonost a škálovatelnost. Využívá globální CDN (Content Delivery Network), který zajišťuje rychlé načítání stránek po celém světě.",
+        "Netlify je oblíbenou volbou pro vývojáře díky své jednoduchosti, spolehlivosti a silným funkcím. Poskytuje kompletní řešení pro správu a nasazení webových projektů a umožňuje vám se soustředit na samotný vývoj bez nutnosti starat se o infrastrukturu."
+      ]
+    }
+  ]
+}

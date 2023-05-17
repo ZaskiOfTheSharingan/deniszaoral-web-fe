@@ -5,9 +5,10 @@
       {{ name }}
       <TextInput v-model="email" label="Email" />
       <TextInput v-model="message" label="Zpráva" />
-      <div class="my-5 mt-7">
+      <div class="recap-wrapper">
         <recaptcha />
       </div>
+      <p class="text-red-700">Potvrďte že nejste robot</p>
       <button class="outline">Odeslat email</button>
     </form>
   </div>
@@ -21,25 +22,38 @@ export default {
       name: '',
       email: '',
       message: '',
+      recapToken: '',
     }
   },
   methods: {
-    sendEmail() {
-      emailjs.init('azb-n7ngrQUlC8TIV')
-      var templateParams = {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      }
-      emailjs.send('service_f1vqemc', 'template_pn2rx8p', templateParams).then(
-        function (response) {
-          console.log('SUCCESS!', response.status, response.text)
-          deleteInputs()
-        },
-        function (error) {
-          console.log('FAILED...', error)
+    async sendEmail() {
+      try {
+        const token = await this.$recaptcha.getResponse()
+        this.recapToken = token
+
+        // send token to server alongside your form data
+        emailjs.init('azb-n7ngrQUlC8TIV')
+        var templateParams = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
         }
-      )
+        emailjs
+          .send('service_f1vqemc', 'template_pn2rx8p', templateParams)
+          .then(
+            function (response) {
+              console.log('SUCCESS!', response.status, response.text)
+              deleteInputs()
+            },
+            function (error) {
+              console.log('FAILED...', error)
+            }
+          )
+        // at the end you need to reset recaptcha
+        await this.$recaptcha.reset()
+      } catch (error) {
+        console.log('Login error:', error)
+      }
     },
     deleteInputs() {
       this.name = ''
@@ -49,3 +63,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.recap-wrapper {
+  margin: 1.5rem 0;
+}
+</style>
