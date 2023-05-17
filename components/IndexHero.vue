@@ -16,10 +16,10 @@
       <h2 class="font-bold text-3xl">Moje služby</h2>
     </div>
     <div
-      class="flex flex-col items-center gap-5 h-full tablet:grid tablet:grid-cols-3"
+      class="flex flex-col tablet:max-h-[410px] items-center gap-5 h-full tablet:grid tablet:grid-cols-3"
     >
       <div
-        class="card-shadow w-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
+        class="card-shadow w-full h-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
       >
         <div class="min-w-[128px] min-h-[112px]">
           <img src="../assets/img/438820-200.png" class="w-full" />
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div
-        class="card-shadow w-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
+        class="card-shadow w-full h-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
       >
         <div class="min-w-[128px] min-h-[112px]">
           <img
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div
-        class="card-shadow w-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
+        class="card-shadow w-full h-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
       >
         <div class="min-w-[128px] min-h-[112px]">
           <img src="../assets/img/1760714-200.png" class="w-full" />

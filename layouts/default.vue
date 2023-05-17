@@ -1,7 +1,7 @@
 <template>
   <div :class="{ dark: darkMode }" class="flex flex-row">
     <div class="w-full h-full">
-      <header class="shadow-[1px_5px_15px_0px_rgba(0,0,0,0.75)]">
+      <header>
         <div
           class="z-50 flex flex-row justify-between h-[50px] ease-it duration-300 bg-sky-300 dark:bg-slate-900 px-5"
         >
@@ -10,7 +10,10 @@
               >Denis Zaoral</NuxtLink
             >
           </div>
-          <div class="self-center dark:text-gray-200" v-if="isDesktop">
+          <div
+            class="self-center flex gap-5 text-xl dark:text-gray-200"
+            v-if="isDesktop"
+          >
             <NuxtLink to="/">Domov</NuxtLink>
             <NuxtLink to="/blog">Blog</NuxtLink>
             <NuxtLink to="/contactMe">Kontakt</NuxtLink>
@@ -22,7 +25,10 @@
             </button>
           </div>
           <div v-if="isDesktop" class="self-center dark:text-gray-200">
-            <button class="btn" @click="toggleDarkMode">
+            <button
+              class="outline outline-1 outline-sky-700 ease-it duration-200 dark:outline-slate-700 w-16 rounded-lg"
+              @click="toggleDarkMode"
+            >
               {{ darkMode ? 'Tmavý' : 'Světlý' }}
             </button>
           </div>
@@ -51,7 +57,7 @@
       </header>
       <main
         :class="{ dark: darkMode }"
-        class="px-8 h-auto bg-sky-100 ease-it duration-200 dark:bg-slate-100"
+        class="px-8 h-full bg-sky-100 ease-it duration-200 dark:bg-slate-100"
       >
         <Nuxt />
       </main>
@@ -76,7 +82,9 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
-      console.log(this.isDesktop)
+    })
+    window.addEventListener('load', () => {
+      this.windowWidth = window.innerWidth
     })
   },
   methods: {

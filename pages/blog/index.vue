@@ -8,7 +8,7 @@
         @click="routeToBlog('/blog/' + post.id)"
       >
         <h3 class="font-bold text-2xl text-center mb-2">{{ post.title }}</h3>
-        <img :src="post.image" />
+        <img :src="post.image" class="object-cover" />
       </div>
     </div>
   </div>

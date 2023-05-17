@@ -3,9 +3,9 @@
     <label>{{ label }}</label>
     <input
       type="text"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
-      class="outline w-52"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+      class="outline outline-1 outline-sky-700 w-52 dark:outline-slate-700"
     />
   </div>
 </template>
@@ -13,12 +13,12 @@
 <script>
 export default {
   props: {
-    modelValue: {
+    value: {
       type: String,
       default: '',
     },
     label: '',
+    isTextArea: false,
   },
-  emits: ['update:modelValue'],
 }
 </script>
