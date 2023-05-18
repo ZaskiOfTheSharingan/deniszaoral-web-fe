@@ -2,23 +2,33 @@
   <div class="flex flex-col">
     <label>{{ label }}</label>
     <input
-      type="text"
       :value="value"
       @input="$emit('input', $event.target.value)"
-      class="outline outline-1 outline-sky-700 w-52 dark:outline-slate-700"
+      class="p-1 outline outline-1 rounded-lg w-52"
+      :class="
+        error ? 'outline-red-700' : 'outline-sky-700 dark:outline-slate-700'
+      "
+      :type="type"
+      v-bind="$attrs"
     />
+    <div v-if="error" class="text-red-600">{{ error }}</div>
   </div>
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     value: {
       type: String,
       default: '',
     },
+    type: {
+      type: String,
+      default: 'text',
+    },
     label: '',
-    isTextArea: false,
+    error: '',
   },
 }
 </script>
