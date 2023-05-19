@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="h-full desktop:h-screen">
     <h1 class="font-bold text-3xl">{{ post.title }}</h1>
-    <img :src="post.image" />
+    <img :src="post.image" class="my-4" />
     <div class="flex flex-col gap-3">
       <p
         class="text-xl"

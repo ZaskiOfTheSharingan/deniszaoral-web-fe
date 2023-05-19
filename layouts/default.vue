@@ -57,14 +57,15 @@
       </header>
       <main
         :class="{ dark: darkMode }"
-        class="px-8 h-full bg-sky-100 ease-it duration-200 dark:bg-slate-100"
+        class="px-8 desktop:px-32 h-full bg-sky-100 ease-it duration-200 dark:bg-slate-100"
       >
         <Nuxt />
       </main>
       <footer
-        class="bg-sky-800 text-gray-300 ease-it duration-200 dark:bg-slate-800"
+        class="bg-sky-800 self-center text-center text-gray-300 ease-it duration-200 dark:bg-slate-800"
       >
         <p>Vytvořil Denis Zaoral</p>
+        <p>Verze stránky 1.0.0</p>
       </footer>
     </div>
   </div>
@@ -82,6 +83,10 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
+
+      if (this.isDesktop && this.burgerMenuIsOpen) {
+        this.burgerMenuIsOpen = false
+      }
     })
     window.addEventListener('load', () => {
       this.windowWidth = window.innerWidth

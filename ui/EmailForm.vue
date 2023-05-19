@@ -1,6 +1,9 @@
 <template>
   <div class="py-12">
-    <form @submit.prevent="onSubmit" class="flex flex-col gap-2 w-full">
+    <form
+      @submit.prevent="onSubmit"
+      class="flex flex-col gap-2 w-full desktop:w-1/2"
+    >
       <TextInput v-model="name.value" label="*Jméno" :error="name.error" />
       <TextInput
         v-model="email.value"
@@ -9,6 +12,7 @@
         :error="email.error"
         type="email"
       />
+      <label>*Zpráva</label>
       <textarea
         id="message"
         rows="4"
@@ -18,7 +22,6 @@
             ? 'outline-red-700'
             : 'outline-sky-700 dark:outline-slate-700'
         "
-        placeholder="Zpráva"
         v-model="message.value"
       ></textarea>
       <div v-if="message.error" class="text-red-600">{{ message.error }}</div>
@@ -26,7 +29,9 @@
         <recaptcha />
       </div>
       <p v-if="recapError" class="text-red-600">Potvrďte že nejste robot</p>
-      <button class="bg-sky-300 dark:bg-slate-900 dark:text-gray-200 w-52">
+      <button
+        class="bg-sky-300 dark:bg-slate-900 ease-it duration-200 dark:text-gray-200 w-52"
+      >
         Odeslat email
       </button>
     </form>

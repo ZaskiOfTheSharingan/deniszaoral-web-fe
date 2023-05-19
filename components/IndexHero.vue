@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col align-middle justify-center gap-5 tablet:h-screen">
+  <div class="flex flex-col gap-5 h-full">
     <div>
       <h2 class="font-bold text-3xl">Ahoj!</h2>
-      <p>
+      <p class="text-xl my-5">
         Jsem absolventem elektrotechnické školy v oboru IT s bohatými
         zkušenostmi v vývoji webových aplikací. Specializuji se na práci s
         frameworkem Nuxt pro tvorbu moderních a výkonných webů. Dále mám
@@ -16,7 +16,7 @@
       <h2 class="font-bold text-3xl">Moje služby</h2>
     </div>
     <div
-      class="flex flex-col tablet:max-h-[410px] items-center gap-5 h-full tablet:grid tablet:grid-cols-3"
+      class="flex flex-col items-center gap-5 h-full tablet:grid tablet:grid-cols-3"
     >
       <div
         class="card-shadow w-full h-full p-5 bg-sky-50 rounded-lg max-w-lg dark:bg-slate-50"
